@@ -81,7 +81,7 @@
 
 
             <div class="card-body">
-                <table class="table table-striped table-hover datatable table-sm text-sm" id="">
+                <table class="table table-striped table-hover datatable tsable-sm text-sm" id="">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -96,7 +96,7 @@
                     <tr>
                         <td>
                             <div class="d-flex py-1 align-items-center">
-                              <span class="avatar avatar-lg mr-2" style="background-image: url({{ asset('template/dist/img/user2-160x160.jpg') }})"> </span>
+                              <span class="avatar mr-2" style="background-image: url({{ asset('template/dist/img/user2-160x160.jpg') }})"> </span>
                               <div class="flex-fill">
                                 <div class="font-weight-medium"><strong>{{ $song->name }}</strong></div>
                              
@@ -107,7 +107,9 @@
                         <td> {{ $song->artist }}</td>
                         <td> {{ $song->bpm }}</td>
                         <td>
+                            @if($song->hasTracks())
                             <x-icons.multitracks />
+                            @endif
                             <x-icons.chords />
                             
 

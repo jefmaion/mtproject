@@ -14,6 +14,13 @@ class Song extends Model
 
     protected $guarded =  [];
 
+    public function tracks() {
+        return $this->hasMany(Track::class);
+    }
+
+    public function hasTracks() {
+        return $this->tracks()->count() > 0;
+    }
 
 
 }

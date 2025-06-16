@@ -18,7 +18,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/song', [SongController::class, 'index'])->name('song.index');
+    Route::get('/song/create', [SongController::class, 'create'])->name('song.create');
     Route::post('/song', [SongController::class, 'store'])->name('song.store');
+    Route::post('/song/{song}/upload', [SongController::class, 'upload'])->name('song.upload');
+    Route::put('/song/{song}/update', [SongController::class, 'track_update'])->name('song.track.update');
     Route::get('/song/{song}/show', [SongController::class, 'show'])->name('song.show');
     Route::put('/song/{song}', [SongController::class, 'update'])->name('song.update');
 });

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8d159214972a022abb23336fa27790f",
+    "content-hash": "72ee531265341d4a6b42d7c7d20723d4",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -48,6 +48,99 @@
                 "source": "https://github.com/ColorlibHQ/AdminLTE/tree/v3.2.0"
             },
             "time": "2022-02-07T20:33:09+00:00"
+        },
+        {
+            "name": "boyhagemann/wave",
+            "version": "dev-master",
+            "target-dir": "BoyHagemann/Wave",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/boyhagemann/Wave.git",
+                "reference": "953143a8827a0af9c0ffe69c0962ef92440874b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/boyhagemann/Wave/zipball/953143a8827a0af9c0ffe69c0962ef92440874b4",
+                "reference": "953143a8827a0af9c0ffe69c0962ef92440874b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "BoyHagemann\\Wave\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A php package to read WAV data",
+            "keywords": [
+                "audio",
+                "chunk",
+                "php",
+                "riff",
+                "wave",
+                "waveform"
+            ],
+            "support": {
+                "issues": "https://github.com/boyhagemann/Wave/issues",
+                "source": "https://github.com/boyhagemann/Wave/tree/master"
+            },
+            "time": "2013-10-29T21:50:19+00:00"
+        },
+        {
+            "name": "boyhagemann/waveform",
+            "version": "dev-master",
+            "target-dir": "BoyHagemann/Waveform",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/boyhagemann/Waveform.git",
+                "reference": "3208da4529f7b6cf9244edeefda16c0b11409806"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/boyhagemann/Waveform/zipball/3208da4529f7b6cf9244edeefda16c0b11409806",
+                "reference": "3208da4529f7b6cf9244edeefda16c0b11409806",
+                "shasum": ""
+            },
+            "require": {
+                "boyhagemann/wave": "dev-master",
+                "php": ">=5.3.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "BoyHagemann\\Waveform\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A php package that can generate waveforms based on a WAV file",
+            "keywords": [
+                "audio",
+                "chunk",
+                "php",
+                "riff",
+                "wave",
+                "waveform"
+            ],
+            "support": {
+                "issues": "https://github.com/boyhagemann/Waveform/issues",
+                "source": "https://github.com/boyhagemann/Waveform/tree/master"
+            },
+            "time": "2016-11-23T12:09:37+00:00"
         },
         {
             "name": "brick/math",
@@ -9117,8 +9210,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "boyhagemann/waveform": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
