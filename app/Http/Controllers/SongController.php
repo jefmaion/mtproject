@@ -20,7 +20,8 @@ class SongController extends Controller
     public function index()
     {
         $songs = Song::all();
-        return view('songs.index', compact('songs'));
+        $tracks = Song::find(7)->tracks;
+        return view('songs.index', compact('songs', 'tracks'));
     }
 
     /**
